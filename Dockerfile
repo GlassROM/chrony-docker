@@ -1,4 +1,4 @@
-FROM ghcr.io/glassrom/os-image-docker:latest
+FROM ghcr.io/glassrom/os-image-updater:master
 
 RUN pacman-key --init && pacman-key --populate archlinux
 RUN pacman -S --noconfirm chrony
