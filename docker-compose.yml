@@ -29,10 +29,10 @@ services:
       - unbound-chrony
     networks:
       - chrony_net
-    runtime: runsc
+    runtime: runsc-overlay
 
   unbound-chrony:
-    runtime: runsc
+    runtime: runsc-overlay
     image: ghcr.io/glassrom/dns-docker:master
     read_only: true
     container_name: unbound-chrony
