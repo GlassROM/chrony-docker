@@ -32,7 +32,7 @@ services:
     runtime: runsc-overlay
 
   unbound-chrony:
-    runtime: runsc-overlay
+    runtime: runsc-overlay-host-network
     image: ghcr.io/glassrom/dns-docker:master
     read_only: true
     container_name: unbound-chrony
