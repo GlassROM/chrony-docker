@@ -29,7 +29,7 @@ services:
       - unbound-chrony
     networks:
       - chrony_net
-    runtime: runsc-overlay
+    runtime: runsc-overlay-host-network
 
   unbound-chrony:
     runtime: runsc-overlay-host-network
