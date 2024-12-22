@@ -23,8 +23,8 @@ services:
         bind:
           selinux: z
     tmpfs:
-      - /var/run/chrony:uid=999,gid=999
-      - /run/chrony:uid=999,gid=999
+      - /var/run/chrony:uid=999,gid=999,nosuid,nodev,noexec
+      - /run/chrony:uid=999,gid=999,nosuid,nodev,noexec
     restart: always
     pull_policy: always
     depends_on:
@@ -48,7 +48,7 @@ services:
       - CAP_SYS_RESOURCE
       - CAP_NET_RAW
     tmpfs:
-      - /tmp
+      - /tmp:nosuid,nodev,noexec
     restart: always
     pull_policy: always
     networks:
